@@ -25,15 +25,17 @@ FPD works under Linux and Mac Os environments. I recommend a so-called out of so
 compile_mex_files.m;
 ```
 
-2) Launch the training file:
+2) Create a folder _train_ and three subfolders, namely:
+* posGt: containing 1 file for each positive image. Each file contains the coordinates of each face in the image in the following format: #x #y #w #h
+* pos_jpg: containing the positive samples
+* neg_jpg: containing the negative 
+
+
+3) Launch the training file:
 ```matlab
 train;
 ```
 
-3) Create a folder _train_ and three subfolders, namely:
-* posGt: containing 1 file for each positive image. Each file contains the coordinates of each face in the image in the following format: #x #y #w #h
-* pos_jpg: containing the positive samples
-* neg_jpg: containing the negative 
 
 ### C++
 
