@@ -42,4 +42,4 @@ Go to the bin diretory and launch the program with the following command:
 ./ffd ../detector/detector.xml /path/to/the/image.jpg
 ```
 
-The detector is already trained with the complete AFW dataset[here](https://www.ics.uci.edu/~xzhu/face/). So, you can directly use the xml file inside the _detector_ folder.
+The detector is already trained with the complete [AFW dataset](https://www.ics.uci.edu/~xzhu/face/). So, you can directly use the xml file inside the _detector_ folder.
