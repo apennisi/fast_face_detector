@@ -26,7 +26,7 @@ compile_mex_files.m;
 ```
 
 2) Create a folder _train_ and three subfolders, namely:
-* posGt: containing 1 file for each positive image. Each file contains the coordinates of each face in the image in the following format: #x #y #w #h
+* posGt: containing one txt file for each positive image. Each file contains the coordinates of each face in the image in the following format: #x #y #w #h
 * pos_jpg: containing the positive samples
 * neg_jpg: containing the negative 
 
