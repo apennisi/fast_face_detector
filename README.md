@@ -1,5 +1,5 @@
 # Fast Face Detector (FFD)
-The fast face detector is based on the work "Aggregate channel features for multi-view face detection"[here](https://arxiv.org/abs/1407.4023) presented by Bin Yang, Junjie Yan, Zhen Lei and Stan Z. Li. My version extends the aforementioned one by adding a new channel: the integral image. This innovation makes the detector very robust with respect to the Viola Jones detector. During the next days, I will publish the comparison between the two detectors.
+The fast face detector is based on the work [Aggregate channel features for multi-view face detection](https://arxiv.org/abs/1407.4023) proposed by Bin Yang, Junjie Yan, Zhen Lei and Stan Z. Li. My version extends the aforementioned one by adding a new channel: the integral image. This innovation makes the detector very robust with respect to the Viola Jones detector. During the next days, I will publish the comparison between the two detectors.
 
 ## REQUIREMENTS
 * OpenCV
