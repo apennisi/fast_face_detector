@@ -36,9 +36,6 @@ compile_mex_files.m;
 train;
 ```
 
-
-### C++
-
 ###C++ - Detection
 Go to the bin diretory and launch the program with the following command:
 ```bash
