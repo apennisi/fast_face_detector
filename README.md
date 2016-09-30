@@ -3,10 +3,9 @@ The fast face detector is based on the work [Aggregate channel features for mult
 We tested FFD and VJ on 3547 images by obtaining the following results:
 
 | **Detector** | **True Positive** | **False Positive** | **No Detection** | **Precision** |
-|--------------|-------------------|--------------------|------------------|---------------|
+|--------------|:-------------------:|--------------------|------------------|---------------|
 | FFD | 3059 | 488 | 0 | 86.24% |
 | VJ | 2417 | 896 | 344 | 68.14% |
-|--------------|-------------------|--------------------|------------------|---------------|
 
 
 ## REQUIREMENTS
