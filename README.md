@@ -2,11 +2,12 @@
 The fast face detector is based on the work [Aggregate channel features for multi-view face detection](https://arxiv.org/abs/1407.4023) proposed by Bin Yang, Junjie Yan, Zhen Lei and Stan Z. Li. My version extends the aforementioned one by adding a new channel: the integral image. This innovation makes the detector very robust with respect to the Viola Jones (VJ) detector. 
 We tested FFD and VJ on 3547 images by obtaining the following results:
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| **Detector** | **True Positive** | **False Positive** | **No Detection** | **Precision** |
+|--------------|-------------------|--------------------|------------------|---------------|
+| FFD | 3059 | 488 | 0 | 86.24% |
+| VJ | 2417 | 896 | 344 | 68.14% |
+|--------------|-------------------|--------------------|------------------|---------------|
+
 
 ## REQUIREMENTS
 * OpenCV
