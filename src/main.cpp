@@ -5,14 +5,14 @@
 
 int main(int argc, char **argv)
 {
-	if(argc != 2)
+	if(argc != 3)
 	{
-		std::cout << "Usage: ./" << argv[0] << "model.xml image";
+		std::cout << "Usage: ./" << argv[0] << "model.xml image" << std::endl;
 		exit(-1);
 	}
 	
     cv::Mat image = cv::imread(argv[2]);
-    ffd::detector::FFDDetector detector(argv[1], 60.);
+    ffd::detector::FFDDetector detector(argv[1], 0.); // 0. means that takes all the faces with confidence greater then 0.
     
     detector.process(image);
     std::vector<cv::Rect> rect = detector.getBBoxes();

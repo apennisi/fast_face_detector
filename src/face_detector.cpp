@@ -360,6 +360,7 @@ void FFDDetector::chnsCompute(const cv::Mat &_img, const ffd::structs::Chns &_ch
 
 void FFDDetector::getChild(float *chns1, uint *cids, int *fids, float *thrs, int offset, int &k0, int &k)
 {
+    //std::cout << k << std::endl;
     float ftr = chns1[cids[fids[k]]];
     k = (ftr<thrs[k]) ? 1 : 2;
     k0=k+=k0*2; k+=offset;

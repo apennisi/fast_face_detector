@@ -36,8 +36,11 @@ using namespace ffd;
 
 Classifier &Classifier::operator=(const Classifier &obj)
 {
+    if(this==&obj)
+    {return *this;}
     m_opts = obj.opts();
     m_cls = obj.cls();
+    return *this;
 }
 
 

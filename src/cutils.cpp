@@ -101,7 +101,7 @@ cv::Mat matToCvMat3x(float *O, const cv::Size &_sz)
     int double_area = 2*_sz.area();
     cv::Vec3f vec;
 
-    for(uint j = 0; j < _sz.width; ++j)
+    for(uint j = 0; j < _sz.width && O; ++j)
     {
         for(uint i = 0; i < _sz.height; ++i)
         {

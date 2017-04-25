@@ -60,9 +60,12 @@ namespace ffd
             }
             Nms &operator=(const Nms& other)
             {
+		if(this == &other)
+		  return *this;
                 type = other.type;
                 ovrDnm = other.ovrDnm;
                 overlap = other.overlap;
+		return *this;
             }
 
         public:
@@ -76,9 +79,12 @@ namespace ffd
         public:
             Color &operator=(const Color& other)
             {
+		if(this == &other)
+		  return *this;
                 enable = other.enable;
                 smooth = other.smooth;
                 colorSpace = other.colorSpace;
+		return *this;
             }
 
         public:
@@ -92,11 +98,14 @@ namespace ffd
         public:
             GradMag &operator=(const GradMag& other)
             {
+		if(this == &other)
+		  return *this;
                 enable = other.enable;
                 colorChn = other.colorChn;
                 normRad = other.normRad;
                 normConst = other.normConst;
                 full = other.full;
+		return *this;
             }
         public:
             bool enable;
@@ -111,12 +120,15 @@ namespace ffd
         public:
             GradHist &operator=(const GradHist& other)
             {
+		if(this == &other)
+		  return *this;
                 enable = other.enable;
                 binSize = other.binSize;
                 nOrients = other.nOrients;
                 softBin = other.softBin;
                 useHog = other.useHog;
                 clipHog = other.clipHog;
+		return *this;
             }
         public:
             bool enable;
@@ -133,11 +145,14 @@ namespace ffd
         public:
             Chns &operator=(const Chns &other)
             {
+		if(this == &other)
+		  return *this;
                 shrink = other.shrink;
                 complete = other.complete;
                 pColor = other.pColor;
                 pGradMag = other.pGradMag;
                 pGradHist = other.pGradHist;
+		return *this;
             }
 
         public:
@@ -153,11 +168,14 @@ namespace ffd
         public:
             Tree &operator=(const Tree &other)
             {
+		if(this == &other)
+		  return *this;
                 nBins = other.nBins;
                 maxDepth = other.maxDepth;
                 minWeight = other.minWeight;
                 fracFtrs = other.fracFtrs;
                 nThreads = other.nThreads;
+		return *this;
             }
 
             void print()
@@ -183,10 +201,13 @@ namespace ffd
         public:
             Boost &operator=(const Boost &other)
             {
+		if(this == &other)
+		  return *this;
                 pTree = other.pTree;
                 nWeak = other.nWeak;
                 discrete = other.discrete;
                 verbose = other.verbose;
+		return *this;
             }
 
             void print()
@@ -209,6 +230,8 @@ namespace ffd
         public:
             Cls &operator=(const Cls &other)
             {
+	      if(this == &other)
+		  return *this;
                 fids = other.fids;
                 thrs = other.thrs;
                 child = other.child;
@@ -219,6 +242,7 @@ namespace ffd
                 losses = other.losses;
                 treeDepth = other.treeDepth;
                 fidsSize = other.fidsSize;
+		return *this;
             }
 
             void print()
@@ -304,6 +328,8 @@ namespace ffd
         public:
             Pyramid &operator=(const Pyramid &other)
             {
+		if(this == &other)
+		  return *this;
                 pChns = other.pChns;
                 nPerOct = other.nPerOct;
                 nOctup = other.nOctup;
@@ -314,6 +340,7 @@ namespace ffd
                 smooth = other.smooth;
                 concat = other.concat;
                 complete = other.complete;
+		return *this;
             }
 
             void print()
@@ -376,6 +403,8 @@ namespace ffd
         public:
             Options &operator=(const Options &other)
             {
+		if(this == &other)
+		  return *this;
                 pPyramid = other.pPyramid;
                 pBoost = other.pBoost;
                 filters = other.filters;
@@ -394,6 +423,7 @@ namespace ffd
                 winSave = other.winSave;
                 pLoad = other.pLoad;
                 flip = other.flip;
+		return *this;
             }
 
             void print()
@@ -458,8 +488,11 @@ namespace ffd
         public:
             BBox &operator=(const BBox &_other)
             {
+		if(this == &_other)
+		  return *this;
                 bbox = _other.bbox;
                 conf = _other.conf;
+		return *this;
             }
 
         public:
