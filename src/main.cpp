@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 	}
 	
     cv::Mat image = cv::imread(argv[2]);
-    ffd::detector::FFDDetector detector(argv[1], 0.); // 0. means that takes all the faces with confidence greater then 0.
+    ffd::detector::FFDDetector detector(argv[1], 0.); // 0. means that takes all the faces with confidence greater than 0.
     
     detector.process(image);
     std::vector<cv::Rect> rect = detector.getBBoxes();
