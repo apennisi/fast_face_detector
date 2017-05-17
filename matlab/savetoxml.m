@@ -25,7 +25,7 @@ fprintf(fid, '\t\t\t\t<shrink>%d</shrink>\n', chns.shrink);
 fprintf(fid, '\t\t\t\t<color>\n');
 fprintf(fid, '\t\t\t\t\t<enabled>%d</enabled>\n', chns.pColor.enabled);
 fprintf(fid, '\t\t\t\t\t<smooth>%d</smooth>\n', chns.pColor.smooth);
-fprintf(fid, '\t\t\t\t\t<colorspace>luv</colorspace>\n');
+fprintf(fid, '\t\t\t\t\t<colorspace>1</colorspace>\n');
 fprintf(fid, '\t\t\t\t</color>\n');
 
 fprintf(fid, '\t\t\t\t<gradmag>\n');
@@ -77,9 +77,8 @@ end
 fprintf(fid, '\t\t\t</pad>\n');
 
 fprintf(fid, '\t\t\t<minds>\n');
-for i=1:length(pyramid.minDs)
-    fprintf(fid, '\t\t\t\t<value>%d</value>\n', pyramid.minDs(i));
-end
+fprintf(fid, '\t\t\t\t<height>%d</height>\n', pyramid.minDs(1));
+fprintf(fid, '\t\t\t\t<width>%d</width>\n', pyramid.minDs(2));
 fprintf(fid, '\t\t\t</minds>\n');
 
 fprintf(fid, '\t\t\t<smooth>%d</smooth>\n', pyramid.smooth);
@@ -110,9 +109,9 @@ fprintf(fid, '\t\t</modeldspad>\n');
 
 nms = opts.pNms;
 fprintf(fid, '\t\t<nms>\n');
-fprintf(fid, '\t\t\t<type>%s</type>\n', nms.type);
+fprintf(fid, '\t\t\t<type>1</type>\n');
 fprintf(fid, '\t\t\t<overlap>%f</overlap>\n', nms.overlap);
-fprintf(fid, '\t\t\t<ovrdnm>%s</ovrdnm>\n', nms.ovrDnm);
+fprintf(fid, '\t\t\t<ovrdnm>1</ovrdnm>\n');
 fprintf(fid, '\t\t</nms>\n');
 
 fprintf(fid, '\t\t<stride>%d</stride>\n', opts.stride);
@@ -142,9 +141,8 @@ fprintf(fid, '\t\t</boost>\n');
 fprintf(fid, '\t\t<seed>%d</seed>\n', opts.seed);
 
 fprintf(fid, '\t\t<squarify>\n');
-for i=1:length(opts.pLoad.squarify)
-    fprintf(fid, '\t\t\t<value>%d</value>\n', opts.pLoad.squarify{i});
-end
+fprintf(fid, '\t\t\t<height>%d</height>\n', opts.pLoad.squarify{1});
+fprintf(fid, '\t\t\t<width>%d</width>\n', opts.pLoad.squarify{2});
 fprintf(fid, '\t\t</squarify>\n');
 
 fprintf(fid, '\t\t<pos>Inf</pos>\n');
